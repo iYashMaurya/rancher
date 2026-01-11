@@ -5,14 +5,14 @@ go 1.25.0
 toolchain go1.25.4
 
 replace (
-	github.com/rancher/aks-operator => github.com/iYashMaurya/aks-operator v0.0.0-20260102065012-f61a29f5791b
-	github.com/rancher/ali-operator => github.com/iYashMaurya/ali-operator v0.0.0-20260102054025-21b739b5c2ca
-	github.com/rancher/eks-operator => github.com/iYashMaurya/eks-operator v0.0.0-20260102060551-c838ae83d501
-	github.com/rancher/fleet/pkg/apis => github.com/iYashMaurya/fleet/pkg/apis v0.0.0-20260105055212-6bf983b3781f
-	github.com/rancher/gke-operator => github.com/iYashMaurya/gke-operator v0.0.0-20260102065652-edf656961cfa
-	github.com/rancher/norman => github.com/iYashMaurya/norman v0.0.0-20251230053425-756ba14175e2
+	github.com/rancher/aks-operator => github.com/iYashMaurya/aks-operator v0.0.0-20260111182733-0491bdf248b1
+	github.com/rancher/ali-operator => github.com/iYashMaurya/ali-operator v0.0.0-20260111182817-0678bffa45d9
+	github.com/rancher/eks-operator => github.com/iYashMaurya/eks-operator v0.0.0-20260111182604-9f49bc3f0b0a
+	github.com/rancher/fleet/pkg/apis => github.com/iYashMaurya/fleet/pkg/apis v0.0.0-20260111183516-e91f4169087c
+	github.com/rancher/gke-operator => github.com/iYashMaurya/gke-operator v0.0.0-20260111182652-d788e4593b6a
+	github.com/rancher/norman => github.com/iYashMaurya/norman v0.0.0-20260111175902-22f8f00a30cb
 	github.com/rancher/rke => github.com/iYashMaurya/rke v0.0.0-20260102070823-3c253837b4e9
-	github.com/rancher/wrangler/v3 => github.com/iYashMaurya/wrangler/v3 v3.0.0-20251229090358-2a0ac2717b07
+	github.com/rancher/wrangler/v3 => github.com/iYashMaurya/wrangler/v3 v3.0.0-20260111155633-72014ddd7f4b
 	k8s.io/api => k8s.io/api v0.35.0
 	k8s.io/apiextensions-apiserver => k8s.io/apiextensions-apiserver v0.35.0
 	k8s.io/apimachinery => k8s.io/apimachinery v0.35.0
