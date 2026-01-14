@@ -430,6 +430,8 @@ github.com/iYashMaurya/gke-operator v0.0.0-20260111182652-d788e4593b6a h1:e5YZCR
 github.com/iYashMaurya/gke-operator v0.0.0-20260111182652-d788e4593b6a/go.mod h1:fVaR1/ICA07wGzhjv5eOfRLP/fOu3X2TSflwQ6moCEs=
 github.com/iYashMaurya/kubernetes-provider-detector v0.0.0-20251231054446-4a8e50867b65 h1:TBp6/NY5N/cTKvFzc4oZ/0x3+b+mAPIJAgFzU8DOeQE=
 github.com/iYashMaurya/kubernetes-provider-detector v0.0.0-20251231054446-4a8e50867b65/go.mod h1:vi1XuZ74RKNrMGZk5SveSXQdKJZP/iW3/CXssUBjMkw=
+github.com/iYashMaurya/lasso v0.0.0-20251229045230-e8b5b0ffb53d h1:vOkLvrZ2AnOeUHW0/KPczfyhcHxiRpvjOrp6llbx2V4=
+github.com/iYashMaurya/lasso v0.0.0-20251229045230-e8b5b0ffb53d/go.mod h1:svOYqeyBo4gQmXbwtPkJHvLpTx5auSa+wVmzoXT9f2k=
 github.com/iYashMaurya/machine v0.0.0-20260111184732-4834ef4c700e h1:Fy5CssRmYdww8K9Bc880HvFayuAfUZPkSu/KPKsUV7k=
 github.com/iYashMaurya/machine v0.0.0-20260111184732-4834ef4c700e/go.mod h1:Xva+whe22LmSxHetuRC1mMiARjP+/XqY5FmTVrY7AjM=
 github.com/iYashMaurya/norman v0.0.0-20260111175902-22f8f00a30cb h1:kTPYjfeoMf2ageuIAC8bfEwm5uQzMogDIkio+ugl8Oc=
@@ -440,8 +442,8 @@ github.com/iYashMaurya/rke v0.0.0-20260102070823-3c253837b4e9 h1:SMt6Dl9+p/w32fX
 github.com/iYashMaurya/rke v0.0.0-20260102070823-3c253837b4e9/go.mod h1:eW1sK/xLVCaZp/HlsTQXsnP6Ua1JlFkmwuCa8V/TEhI=
 github.com/iYashMaurya/shepherd v0.0.0-20260111190547-fe08d9ea7706 h1:Z2vqDx9KOej+BJIuF4jh24BDbNklvOTvDBsU2OHkyUk=
 github.com/iYashMaurya/shepherd v0.0.0-20260111190547-fe08d9ea7706/go.mod h1:B9jT7ugePBierNq33glJ985ZIXO3tMll64lo5Z46AIQ=
-github.com/iYashMaurya/steve v0.0.0-20260111185244-f5eee3fe0b77 h1:bsTKjKEC7RzIZiL6gwQA3L3hGYAINOFepu28hSZLwmI=
-github.com/iYashMaurya/steve v0.0.0-20260111185244-f5eee3fe0b77/go.mod h1:t5bymTUG91hkNMtw1rg5IVsz2o8VunVI8aJPUvEetgQ=
+github.com/iYashMaurya/steve v0.0.0-20260113110812-2bf73787dfb6 h1:F+EJFJkf6CNuQZTo+ibcISUETEHh4rI/8hNekrAkDzU=
+github.com/iYashMaurya/steve v0.0.0-20260113110812-2bf73787dfb6/go.mod h1:t5bymTUG91hkNMtw1rg5IVsz2o8VunVI8aJPUvEetgQ=
 github.com/iYashMaurya/system-upgrade-controller/pkg/apis v0.0.0-20260111184209-4e7f6c6e4209 h1:DQH6mtWt7xCBJRmaJjICEfK0GcKGsbSW+gjkpEB3x8A=
 github.com/iYashMaurya/system-upgrade-controller/pkg/apis v0.0.0-20260111184209-4e7f6c6e4209/go.mod h1:F05bDiURz1V8OsdM/+eJGGXwTbykeYTtX9EIt8psLYw=
 github.com/iYashMaurya/wrangler/v3 v3.0.0-20260111155633-72014ddd7f4b h1:orcAz3c0DGIMyH6Jy3FurLpdMGK7ADJaJanb3n4ggJo=
@@ -610,8 +612,6 @@ github.com/rancher/helm/v3 v3.19.0-rancher1 h1:5IUv6OTl6VYzKleIkriHzm6sB7L2gUfv6
 github.com/rancher/helm/v3 v3.19.0-rancher1/go.mod h1:Lk/SfzN0w3a3C3o+TdAKrLwJ0wcZ//t1/SDXAvfgDdc=
 github.com/rancher/jsonpath v0.0.0-20250620213443-ad24535cf0c1 h1:vRtxuvIF0UarXIAwGYNwSFoRYJadVnOrD8kx2qrZyN8=
 github.com/rancher/jsonpath v0.0.0-20250620213443-ad24535cf0c1/go.mod h1:xavYr3cNyyAeA72nMVB60+q/EJ8Anu+loQWFJyXOeP8=
-github.com/rancher/lasso v0.2.5 h1:K++lWDDdfeN98Ixc1kCfUq0/q6tLjoHN++Np6QntXw0=
-github.com/rancher/lasso v0.2.5/go.mod h1:71rWfv+KkdSmSxZ9Ly5QYhxAu0nEUcaq9N2ByjcHqAM=
 github.com/rancher/moq v0.0.0-20200712062324-13d1f37d2d77 h1:k+vzmkZQsH06rZnDr+phskSixG9ByNj9gVdzHcc8nxw=
 github.com/rancher/moq v0.0.0-20200712062324-13d1f37d2d77/go.mod h1:wpITyDPTi/Na5h73XkbuEf2AP9fbgrIGqqxVzFhYD6U=
 github.com/rancher/muchang v0.1.0 h1:Yuu3b7eFRqnnbp6qbLsP/5SY3IKGDj2mUUTzy4AiUVw=

@@ -18,6 +18,7 @@ replace (
 	github.com/rancher/fleet/pkg/apis => github.com/iYashMaurya/fleet/pkg/apis v0.0.0-20260111183516-e91f4169087c
 	github.com/rancher/gke-operator => github.com/iYashMaurya/gke-operator v0.0.0-20260111182652-d788e4593b6a
 	github.com/rancher/kubernetes-provider-detector => github.com/iYashMaurya/kubernetes-provider-detector v0.0.0-20251231054446-4a8e50867b65
+	github.com/rancher/lasso => github.com/iYashMaurya/lasso v0.0.0-20251229045230-e8b5b0ffb53d
 	github.com/rancher/machine => github.com/iYashMaurya/machine v0.0.0-20260111184732-4834ef4c700e
 	github.com/rancher/norman => github.com/iYashMaurya/norman v0.0.0-20260111175902-22f8f00a30cb
 	github.com/rancher/rancher/pkg/apis => ./pkg/apis
@@ -25,7 +26,7 @@ replace (
 	github.com/rancher/remotedialer-proxy => github.com/iYashMaurya/remotedialer-proxy v0.0.0-20260111182213-6c3843b88942
 	github.com/rancher/rke => github.com/iYashMaurya/rke v0.0.0-20260102070823-3c253837b4e9
 	github.com/rancher/shepherd => github.com/iYashMaurya/shepherd v0.0.0-20260111190547-fe08d9ea7706
-	github.com/rancher/steve => github.com/iYashMaurya/steve v0.0.0-20260111185244-f5eee3fe0b77
+	github.com/rancher/steve => github.com/iYashMaurya/steve v0.0.0-20260113110812-2bf73787dfb6
 	github.com/rancher/system-upgrade-controller/pkg/apis => github.com/iYashMaurya/system-upgrade-controller/pkg/apis v0.0.0-20260111184209-4e7f6c6e4209
 	github.com/rancher/wrangler/v3 => github.com/iYashMaurya/wrangler/v3 v3.0.0-20260111155633-72014ddd7f4b
 	github.com/stretchr/testify => github.com/stretchr/testify v1.10.0
