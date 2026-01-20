@@ -26,7 +26,7 @@ replace (
 	github.com/rancher/remotedialer-proxy => github.com/iYashMaurya/remotedialer-proxy v0.0.0-20260111182213-6c3843b88942
 	github.com/rancher/rke => github.com/iYashMaurya/rke v0.0.0-20260102070823-3c253837b4e9
 	github.com/rancher/shepherd => github.com/iYashMaurya/shepherd v0.0.0-20260111190547-fe08d9ea7706
-	github.com/rancher/steve => github.com/iYashMaurya/steve v0.0.0-20260118131258-2ff153028832
+	github.com/rancher/steve => github.com/iYashMaurya/steve v0.0.0-20260120052043-002c623dc2ab
 	github.com/rancher/system-upgrade-controller/pkg/apis => github.com/iYashMaurya/system-upgrade-controller/pkg/apis v0.0.0-20260111184209-4e7f6c6e4209
 	github.com/rancher/wrangler/v3 => github.com/iYashMaurya/wrangler/v3 v3.0.0-20260111155633-72014ddd7f4b
 	github.com/stretchr/testify => github.com/stretchr/testify v1.10.0

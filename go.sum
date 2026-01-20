@@ -442,8 +442,8 @@ github.com/iYashMaurya/rke v0.0.0-20260102070823-3c253837b4e9 h1:SMt6Dl9+p/w32fX
 github.com/iYashMaurya/rke v0.0.0-20260102070823-3c253837b4e9/go.mod h1:eW1sK/xLVCaZp/HlsTQXsnP6Ua1JlFkmwuCa8V/TEhI=
 github.com/iYashMaurya/shepherd v0.0.0-20260111190547-fe08d9ea7706 h1:Z2vqDx9KOej+BJIuF4jh24BDbNklvOTvDBsU2OHkyUk=
 github.com/iYashMaurya/shepherd v0.0.0-20260111190547-fe08d9ea7706/go.mod h1:B9jT7ugePBierNq33glJ985ZIXO3tMll64lo5Z46AIQ=
-github.com/iYashMaurya/steve v0.0.0-20260118131258-2ff153028832 h1:vOaSDoz3JuS+/3GU5Lw4o9qnu7UGULWnEsRZeBdRra4=
-github.com/iYashMaurya/steve v0.0.0-20260118131258-2ff153028832/go.mod h1:P9lNgtwRNZRQVAzyRq/wIkGpWe3D2Mx55J//rHLf82M=
+github.com/iYashMaurya/steve v0.0.0-20260120052043-002c623dc2ab h1:RltpaA4QIpptmln56IhP3yPHD92YVwwFXQmD1NLJX+0=
+github.com/iYashMaurya/steve v0.0.0-20260120052043-002c623dc2ab/go.mod h1:t5bymTUG91hkNMtw1rg5IVsz2o8VunVI8aJPUvEetgQ=
 github.com/iYashMaurya/system-upgrade-controller/pkg/apis v0.0.0-20260111184209-4e7f6c6e4209 h1:DQH6mtWt7xCBJRmaJjICEfK0GcKGsbSW+gjkpEB3x8A=
 github.com/iYashMaurya/system-upgrade-controller/pkg/apis v0.0.0-20260111184209-4e7f6c6e4209/go.mod h1:F05bDiURz1V8OsdM/+eJGGXwTbykeYTtX9EIt8psLYw=
 github.com/iYashMaurya/wrangler/v3 v3.0.0-20260111155633-72014ddd7f4b h1:orcAz3c0DGIMyH6Jy3FurLpdMGK7ADJaJanb3n4ggJo=
