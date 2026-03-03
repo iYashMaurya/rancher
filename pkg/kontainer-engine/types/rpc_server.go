@@ -4,13 +4,36 @@ import (
 	"net"
 
 	"github.com/rancher/rancher/pkg/kontainer-engine/logstream"
-	"github.com/rancher/rke/log"
 	"github.com/sirupsen/logrus"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/metadata"
 	"google.golang.org/grpc/reflection"
 )
+
+type loggerKey struct{}
+
+// rpcLogger defines the standard logging methods we actually need to call
+type rpcLogger interface {
+	Infof(format string, args ...interface{})
+	Warnf(format string, args ...interface{})
+	Errorf(format string, args ...interface{})
+	Debugf(format string, args ...interface{})
+}
+
+// setLogger accepts any logger and embeds it in the context
+func setLogger(ctx context.Context, logger interface{}) context.Context {
+	return context.WithValue(ctx, loggerKey{}, logger)
+}
+
+// getLogger retrieves the logger from context, falling back to logrus if needed
+func getLogger(ctx context.Context) rpcLogger {
+	if logger, ok := ctx.Value(loggerKey{}).(rpcLogger); ok && logger != nil {
+		return logger
+	}
+	// Fallback to standard logger if nothing is in the context
+	return logrus.StandardLogger()
+}
 
 // GrpcServer defines the server struct
 type GrpcServer struct {
@@ -102,7 +125,7 @@ func GetCtx(ctx context.Context) context.Context {
 	if logger == nil {
 		return ctx
 	}
-	return log.SetLogger(ctx, logger)
+	return setLogger(ctx, logger)
 }
 
 func (s *GrpcServer) GetCapabilities(ctx context.Context, in *Empty) (*Capabilities, error) {

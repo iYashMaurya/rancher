@@ -5,7 +5,6 @@ import (
 
 	"github.com/rancher/norman/condition"
 	"github.com/rancher/norman/types"
-	rketypes "github.com/rancher/rke/types"
 	v1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
@@ -89,19 +88,19 @@ type MapDelta struct {
 }
 
 type NodeStatus struct {
-	Conditions         []NodeCondition         `json:"conditions,omitempty"`
-	InternalNodeStatus v1.NodeStatus           `json:"internalNodeStatus,omitempty"`
-	NodeName           string                  `json:"nodeName,omitempty"`
-	Requested          v1.ResourceList         `json:"requested,omitempty"`
-	Limits             v1.ResourceList         `json:"limits,omitempty"`
-	NodeTemplateSpec   *NodeTemplateSpec       `json:"nodeTemplateSpec,omitempty"`
-	NodeConfig         *rketypes.RKEConfigNode `json:"rkeNode,omitempty"`
-	NodeAnnotations    map[string]string       `json:"nodeAnnotations,omitempty"`
-	NodeLabels         map[string]string       `json:"nodeLabels,omitempty"`
-	NodeTaints         []v1.Taint              `json:"nodeTaints,omitempty"`
-	DockerInfo         *DockerInfo             `json:"dockerInfo,omitempty"`
-	NodePlan           *NodePlan               `json:"nodePlan,omitempty"`
-	AppliedNodeVersion int                     `json:"appliedNodeVersion,omitempty"`
+	Conditions         []NodeCondition   `json:"conditions,omitempty"`
+	InternalNodeStatus v1.NodeStatus     `json:"internalNodeStatus,omitempty"`
+	NodeName           string            `json:"nodeName,omitempty"`
+	Requested          v1.ResourceList   `json:"requested,omitempty"`
+	Limits             v1.ResourceList   `json:"limits,omitempty"`
+	NodeTemplateSpec   *NodeTemplateSpec `json:"nodeTemplateSpec,omitempty"`
+	NodeConfig         *RKEConfigNode    `json:"rkeNode,omitempty"`
+	NodeAnnotations    map[string]string `json:"nodeAnnotations,omitempty"`
+	NodeLabels         map[string]string `json:"nodeLabels,omitempty"`
+	NodeTaints         []v1.Taint        `json:"nodeTaints,omitempty"`
+	DockerInfo         *DockerInfo       `json:"dockerInfo,omitempty"`
+	NodePlan           *NodePlan         `json:"nodePlan,omitempty"`
+	AppliedNodeVersion int               `json:"appliedNodeVersion,omitempty"`
 }
 
 type DockerInfo struct {
@@ -246,8 +245,8 @@ type NodeSpec struct {
 }
 
 type NodePlan struct {
-	Plan    *rketypes.RKEConfigNodePlan `json:"plan,omitempty"`
-	Version int                         `json:"version,omitempty"`
+	Plan    *RKEConfigNodePlan `json:"plan,omitempty"`
+	Version int                `json:"version,omitempty"`
 	// current default in rancher-agent is 2m (120s)
 	AgentCheckInterval int `json:"agentCheckInterval,omitempty" norman:"min=1,max=1800,default=120"`
 }
@@ -383,8 +382,6 @@ type PublicEndpoint struct {
 	// True when endpoint is exposed on every node
 	AllNodes bool `json:"allNodes" norman:"nocreate,noupdate"`
 }
-
-type NodeDrainInput = rketypes.NodeDrainInput
 
 // +genclient
 // +kubebuilder:skipversion
