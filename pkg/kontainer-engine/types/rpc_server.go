@@ -4,13 +4,28 @@ import (
 	"net"
 
 	"github.com/rancher/rancher/pkg/kontainer-engine/logstream"
-	"github.com/rancher/rke/log"
 	"github.com/sirupsen/logrus"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/metadata"
 	"google.golang.org/grpc/reflection"
 )
+
+type logKey string
+
+const (
+	key logKey = "rke-logger"
+)
+
+type logger interface {
+	Debugf(msg string, args ...interface{})
+	Infof(msg string, args ...interface{})
+	Warnf(msg string, args ...interface{})
+}
+
+func SetLogger(ctx context.Context, logger logger) context.Context {
+	return context.WithValue(ctx, key, logger)
+}
 
 // GrpcServer defines the server struct
 type GrpcServer struct {
@@ -102,7 +117,7 @@ func GetCtx(ctx context.Context) context.Context {
 	if logger == nil {
 		return ctx
 	}
-	return log.SetLogger(ctx, logger)
+	return SetLogger(ctx, logger)
 }
 
 func (s *GrpcServer) GetCapabilities(ctx context.Context, in *Empty) (*Capabilities, error) {

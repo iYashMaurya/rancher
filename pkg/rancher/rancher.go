@@ -921,20 +921,6 @@ func checkForRKE1Resources(wranglerContext *wrangler.Context) ([]string, error) 
 	logrus.Infof("Scanning NodeTemplates in namespace: %s, group: nodetemplates.management.cattle.io", namespace.NodeTemplateGlobalNamespace)
 	logrus.Infof("Scanning ClusterTemplates in namespace: %s, group: clustertemplates.management.cattle.io", namespace.GlobalNamespace)
 
-	// Check for RKE1 clusters
-	clusters, err := wranglerContext.Mgmt.Cluster().List(metav1.ListOptions{})
-	if apierrors.IsNotFound(err) {
-		clusters = &v3.ClusterList{}
-	} else if err != nil {
-		return nil, fmt.Errorf("error checking RKE1 clusters: %w", err)
-	}
-
-	for _, cluster := range clusters.Items {
-		if cluster.Spec.RancherKubernetesEngineConfig != nil {
-			found = append(found, fmt.Sprintf("Cluster: name=%s, displayName=%s", cluster.Name, cluster.Spec.DisplayName))
-		}
-	}
-
 	// NodeTemplates in the global node template namespace
 	nodeTemplates, err := wranglerContext.Mgmt.NodeTemplate().List(namespace.NodeTemplateGlobalNamespace, metav1.ListOptions{})
 

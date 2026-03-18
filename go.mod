@@ -11,6 +11,7 @@ replace (
 	github.com/matryer/moq => github.com/rancher/moq v0.0.0-20200712062324-13d1f37d2d77
 	github.com/rancher/rancher/pkg/apis => ./pkg/apis
 	github.com/rancher/rancher/pkg/client => ./pkg/client
+	github.com/rancher/shepherd => github.com/iyashmaurya/shepherd v0.0.0-20260318065329-a59b29d789ef
 	github.com/stretchr/testify => github.com/stretchr/testify v1.10.0
 	go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc => go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.63.0
 	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp => go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.63.0
@@ -127,11 +128,10 @@ require (
 	github.com/rancher/lasso v0.2.7
 	github.com/rancher/machine v0.15.0-rancher140
 	github.com/rancher/muchang v0.1.0
-	github.com/rancher/norman v0.8.4
+	github.com/rancher/norman v0.9.0
 	github.com/rancher/rancher/pkg/client v0.0.0
 	github.com/rancher/remotedialer v0.6.0
 	github.com/rancher/remotedialer-proxy v0.7.0-rc.5
-	github.com/rancher/rke v1.8.0
 	github.com/rancher/shepherd v0.0.0-20260218212518-d89877f13cac
 	github.com/rancher/steve v0.8.19
 	github.com/rancher/system-upgrade-controller/pkg/apis v0.0.0-20260218133309-b0ff1f4c330d
@@ -159,7 +159,7 @@ require (
 	helm.sh/helm/v3 v3.20.0
 	k8s.io/api v0.35.1
 	k8s.io/apiextensions-apiserver v0.35.1
-	k8s.io/apimachinery v0.35.1
+	k8s.io/apimachinery v0.35.2
 	k8s.io/apiserver v0.35.1
 	k8s.io/cli-runtime v0.35.1
 	k8s.io/client-go v12.0.0+incompatible

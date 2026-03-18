@@ -30,6 +30,7 @@ const (
 	NodeFieldLimits               = "limits"
 	NodeFieldName                 = "name"
 	NodeFieldNamespaceId          = "namespaceId"
+	NodeFieldNodeDrainInput       = "nodeDrainInput"
 	NodeFieldNodeName             = "nodeName"
 	NodeFieldNodePlan             = "nodePlan"
 	NodeFieldNodePoolID           = "nodePoolId"
@@ -45,7 +46,6 @@ const (
 	NodeFieldRequestedHostname    = "requestedHostname"
 	NodeFieldRuntimeHandlers      = "runtimeHandlers"
 	NodeFieldScaledownTime        = "scaledownTime"
-	NodeFieldSshUser              = "sshUser"
 	NodeFieldState                = "state"
 	NodeFieldTaints               = "taints"
 	NodeFieldTransitioning        = "transitioning"
@@ -83,6 +83,7 @@ type Node struct {
 	Limits               map[string]string         `json:"limits,omitempty" yaml:"limits,omitempty"`
 	Name                 string                    `json:"name,omitempty" yaml:"name,omitempty"`
 	NamespaceId          string                    `json:"namespaceId,omitempty" yaml:"namespaceId,omitempty"`
+	NodeDrainInput       *NodeDrainInput           `json:"nodeDrainInput,omitempty" yaml:"nodeDrainInput,omitempty"`
 	NodeName             string                    `json:"nodeName,omitempty" yaml:"nodeName,omitempty"`
 	NodePlan             *NodePlan                 `json:"nodePlan,omitempty" yaml:"nodePlan,omitempty"`
 	NodePoolID           string                    `json:"nodePoolId,omitempty" yaml:"nodePoolId,omitempty"`
@@ -98,7 +99,6 @@ type Node struct {
 	RequestedHostname    string                    `json:"requestedHostname,omitempty" yaml:"requestedHostname,omitempty"`
 	RuntimeHandlers      []NodeRuntimeHandler      `json:"runtimeHandlers,omitempty" yaml:"runtimeHandlers,omitempty"`
 	ScaledownTime        string                    `json:"scaledownTime,omitempty" yaml:"scaledownTime,omitempty"`
-	SshUser              string                    `json:"sshUser,omitempty" yaml:"sshUser,omitempty"`
 	State                string                    `json:"state,omitempty" yaml:"state,omitempty"`
 	Taints               []Taint                   `json:"taints,omitempty" yaml:"taints,omitempty"`
 	Transitioning        string                    `json:"transitioning,omitempty" yaml:"transitioning,omitempty"`
@@ -130,8 +130,6 @@ type NodeOperations interface {
 	Delete(container *Node) error
 
 	ActionCordon(resource *Node) error
-
-	ActionDrain(resource *Node, input *NodeDrainInput) error
 
 	ActionScaledown(resource *Node) error
 
@@ -211,11 +209,6 @@ func (c *NodeClient) Delete(container *Node) error {
 
 func (c *NodeClient) ActionCordon(resource *Node) error {
 	err := c.apiClient.Ops.DoAction(NodeType, "cordon", &resource.Resource, nil, nil)
-	return err
-}
-
-func (c *NodeClient) ActionDrain(resource *Node, input *NodeDrainInput) error {
-	err := c.apiClient.Ops.DoAction(NodeType, "drain", &resource.Resource, input, nil)
 	return err
 }
 

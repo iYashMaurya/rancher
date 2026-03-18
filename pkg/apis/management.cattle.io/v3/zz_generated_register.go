@@ -74,9 +74,6 @@ var (
 	ProjectRoleTemplateBindingResourceName                = "projectroletemplatebindings"
 	ProxyEndpointResourceName                             = "proxyendpoints"
 	RancherUserNotificationResourceName                   = "rancherusernotifications"
-	RkeAddonResourceName                                  = "rkeaddons"
-	RkeK8sServiceOptionResourceName                       = "rkek8sserviceoptions"
-	RkeK8sSystemImageResourceName                         = "rkek8ssystemimages"
 	RoleTemplateResourceName                              = "roletemplates"
 	SamlProviderResourceName                              = "samlproviders"
 	SamlTokenResourceName                                 = "samltokens"
@@ -199,12 +196,6 @@ func addKnownTypes(scheme *runtime.Scheme) error {
 		&ProxyEndpointList{},
 		&RancherUserNotification{},
 		&RancherUserNotificationList{},
-		&RkeAddon{},
-		&RkeAddonList{},
-		&RkeK8sServiceOption{},
-		&RkeK8sServiceOptionList{},
-		&RkeK8sSystemImage{},
-		&RkeK8sSystemImageList{},
 		&RoleTemplate{},
 		&RoleTemplateList{},
 		&SamlProvider{},

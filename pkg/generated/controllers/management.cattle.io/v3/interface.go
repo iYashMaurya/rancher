@@ -77,9 +77,6 @@ type Interface interface {
 	ProjectRoleTemplateBinding() ProjectRoleTemplateBindingController
 	ProxyEndpoint() ProxyEndpointController
 	RancherUserNotification() RancherUserNotificationController
-	RkeAddon() RkeAddonController
-	RkeK8sServiceOption() RkeK8sServiceOptionController
-	RkeK8sSystemImage() RkeK8sSystemImageController
 	RoleTemplate() RoleTemplateController
 	SamlProvider() SamlProviderController
 	SamlToken() SamlTokenController
@@ -281,18 +278,6 @@ func (v *version) ProxyEndpoint() ProxyEndpointController {
 
 func (v *version) RancherUserNotification() RancherUserNotificationController {
 	return generic.NewNonNamespacedController[*v3.RancherUserNotification, *v3.RancherUserNotificationList](schema.GroupVersionKind{Group: "management.cattle.io", Version: "v3", Kind: "RancherUserNotification"}, "rancherusernotifications", v.controllerFactory)
-}
-
-func (v *version) RkeAddon() RkeAddonController {
-	return generic.NewController[*v3.RkeAddon, *v3.RkeAddonList](schema.GroupVersionKind{Group: "management.cattle.io", Version: "v3", Kind: "RkeAddon"}, "rkeaddons", true, v.controllerFactory)
-}
-
-func (v *version) RkeK8sServiceOption() RkeK8sServiceOptionController {
-	return generic.NewController[*v3.RkeK8sServiceOption, *v3.RkeK8sServiceOptionList](schema.GroupVersionKind{Group: "management.cattle.io", Version: "v3", Kind: "RkeK8sServiceOption"}, "rkek8sserviceoptions", true, v.controllerFactory)
-}
-
-func (v *version) RkeK8sSystemImage() RkeK8sSystemImageController {
-	return generic.NewController[*v3.RkeK8sSystemImage, *v3.RkeK8sSystemImageList](schema.GroupVersionKind{Group: "management.cattle.io", Version: "v3", Kind: "RkeK8sSystemImage"}, "rkek8ssystemimages", true, v.controllerFactory)
 }
 
 func (v *version) RoleTemplate() RoleTemplateController {
